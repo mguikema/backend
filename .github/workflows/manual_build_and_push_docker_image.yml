@@ -26,8 +26,8 @@ jobs:
       - name: Build the Docker image
         run: |
           cd api/
-          docker build -t signalen/backend:${{ github.event.inputs.tag }} .
+          docker build -t mguikema/signalen-backend:${{ github.event.inputs.tag }} .
 
 
       - name: Push the tagged image to Docker
-        run: docker push signalen/backend:${{ github.event.inputs.tag }}
+        run: docker push mguikema/signalen-backend:${{ github.event.inputs.tag }}
