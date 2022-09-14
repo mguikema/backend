@@ -32,7 +32,7 @@ def check_data(request):
 
     count = health_check_model.objects.count()
     if count < 2:
-        logger.error('Too few items in the database')
+        logger.error('Too few items in the database!!')
         return HttpResponse('Too few items in the database', content_type='text/plain', status=500)
 
     return HttpResponse(f'Data OK {count} {health_check_model.__name__}', content_type='text/plain', status=200)
