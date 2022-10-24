@@ -13,7 +13,7 @@ from signals.apps.api.serializers import (
     PrivateDepartmentSerializerList
 )
 from signals.apps.signals.models import Department
-from signals.auth.backend import JWTAuthBackend
+from signals.auth.backend import AuthBackend
 
 
 class PrivateDepartmentViewSet(mixins.ListModelMixin,
@@ -28,7 +28,7 @@ class PrivateDepartmentViewSet(mixins.ListModelMixin,
 
     pagination_class = HALPagination
 
-    authentication_classes = (JWTAuthBackend,)
+    authentication_classes = (AuthBackend,)
     permission_classes = (SIAPermissions & ModelWritePermissions, )
 
     filter_backends = (DjangoFilterBackend, )

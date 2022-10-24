@@ -4,6 +4,9 @@ import logging
 
 from django.contrib.gis.db import models
 from PIL import Image, ImageFile, UnidentifiedImageError
+from PIL.ExifTags import TAGS, GPSTAGS
+from GPSPhoto import gpsphoto
+import os
 
 from signals.apps.signals.models.mixins import CreatedUpdatedModel
 
@@ -48,7 +51,19 @@ class Attachment(CreatedUpdatedModel):
     def _check_if_file_is_image(self):
         try:
             # Open the file with Pillow
-            Image.open(self.file)
+            img = Image.open(self.file)
+            # print(self.file.path)
+            # print(img.getexif())
+            # exif_table={}
+            # for k, v in img.getexif().items():
+            #     tag=TAGS.get(k)
+            #     exif_table[tag]=v
+            # print(exif_table)
+            # gps_info={}
+            # for k, v in exif_table['GPSInfo'].items():
+            #     geo_tag=GPSTAGS.get(k)
+            #     gps_info[geo_tag]=v
+            # print(gps_info)
         except UnidentifiedImageError:
             # Raised when Pillow does not recognize an image
             return False
@@ -63,3 +78,6 @@ class Attachment(CreatedUpdatedModel):
                 self.mimetype = self.file.file.content_type
 
         super().save(*args, **kwargs)
+        print(self.file.path)
+        data = gpsphoto.getGPSData(self.file.path)
+        print(data)

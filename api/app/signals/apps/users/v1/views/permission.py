@@ -8,7 +8,7 @@ from rest_framework.permissions import DjangoModelPermissions
 
 from signals.apps.api.generics.permissions import SIAPermissions
 from signals.apps.users.v1.serializers import PermissionSerializer
-from signals.auth.backend import JWTAuthBackend
+from signals.auth.backend import AuthBackend
 
 
 class PermissionViewSet(DatapuntViewSet):
@@ -16,7 +16,7 @@ class PermissionViewSet(DatapuntViewSet):
         'content_type',
     ).filter(Q(codename__istartswith='sia_') | Q(codename='push_to_sigmax'))
 
-    authentication_classes = (JWTAuthBackend,)
+    authentication_classes = (AuthBackend,)
     permission_classes = (SIAPermissions & DjangoModelPermissions,)
 
     serializer_detail_class = PermissionSerializer

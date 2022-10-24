@@ -14,7 +14,7 @@ from signals.apps.sigmax.stuf_protocol.incoming import (
     handle_actualiseerZaakstatus_Lk01,
     handle_unsupported_soap_action
 )
-from signals.auth.backend import JWTAuthBackend
+from signals.auth.backend import AuthBackend
 
 logger = logging.getLogger(__name__)
 
@@ -23,7 +23,7 @@ class CityControlReceiver(APIView):
     """
     Receive SOAP messages from CityControl and handle them.
     """
-    authentication_classes = (JWTAuthBackend,)
+    authentication_classes = (AuthBackend,)
 
     def post(self, request, format=None):
         """

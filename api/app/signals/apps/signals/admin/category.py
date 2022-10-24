@@ -73,8 +73,10 @@ class CategoryAdmin(admin.ModelAdmin):
     search_fields = ('name', 'public_name',)
     ordering = ('parent__name', 'name',)
 
-    def has_delete_permission(self, request, obj=None):
-        return False
+    list_editable = ('is_public_accessible',)
+
+    # def has_delete_permission(self, request, obj=None):
+    #     return False
 
     def save_model(self, request, obj, form, change):
         """

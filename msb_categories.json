@@ -1,0 +1,1044 @@
+[
+    {
+      "code": "1",
+      "omschrijving": "Afval",
+      "onderwerpen": [
+        {
+          "code": "86",
+          "omschrijving": "bedrijfsafval",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "1",
+          "omschrijving": "Grofvuil in plantsoen",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "265",
+          "omschrijving": "Grofvuil op straat",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "93",
+          "omschrijving": "grond/zand/grind",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "5",
+          "omschrijving": "huisvuil verkeerd aangeboden",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "116",
+          "omschrijving": "huisvuilzakken naast container",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "112",
+          "omschrijving": "huisvuilzakken niet opgehaald",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "272",
+          "omschrijving": "Klein Afval",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "103",
+          "omschrijving": "koelkast/vriezer",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "106",
+          "omschrijving": "sloopafval",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        }
+      ]
+    },
+    {
+      "code": "23",
+      "omschrijving": "Afvalcontainer+Prullenbak",
+      "onderwerpen": [
+        {
+          "code": "263",
+          "omschrijving": "Bouw/puincontainer",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "83",
+          "omschrijving": "cocon/1100 liter rolcontainer vol",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "205",
+          "omschrijving": "Containerruimte markthal",
+          "magMelden": false,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "146",
+          "omschrijving": "glascontainer kapot",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "82",
+          "omschrijving": "glascontainer vol",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "290",
+          "omschrijving": "Huiscontainer kapot",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "267",
+          "omschrijving": "Huiscontainer(gfe+t/gft) niet geleegd",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "268",
+          "omschrijving": "Huiscontainer(papier) niet geleegd",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "266",
+          "omschrijving": "Huiscontainer(rest) niet geleegd",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "148",
+          "omschrijving": "papiercontainer kapot",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "4",
+          "omschrijving": "papiercontainer vol",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "149",
+          "omschrijving": "prullenbak kapot",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "45",
+          "omschrijving": "prullenbak vol ",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "109",
+          "omschrijving": "restafvalcontainer kapot",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "84",
+          "omschrijving": "restafvalcontainer vol",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "150",
+          "omschrijving": "textielcontainer kapot",
+          "magMelden": false,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "102",
+          "omschrijving": "textielcontainer vol",
+          "magMelden": false,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "280",
+          "omschrijving": "Wijkcontainer (gfe) kapot",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "279",
+          "omschrijving": "Wijkcontainer (gfe) vol",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        }
+      ]
+    },
+    {
+      "code": "24",
+      "omschrijving": "Bomen, planten, gras",
+      "onderwerpen": [
+        {
+          "code": "11",
+          "omschrijving": "bloembakken",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "12",
+          "omschrijving": "Bomen",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "151",
+          "omschrijving": "Gras",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "281",
+          "omschrijving": "Japanse Duizendknoop",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "20",
+          "omschrijving": "plantsoenen",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        }
+      ]
+    },
+    {
+      "code": "25",
+      "omschrijving": "Dieren",
+      "onderwerpen": [
+        {
+          "code": "24",
+          "omschrijving": "Dieren overig",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "180",
+          "omschrijving": "Dode duiven",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "179",
+          "omschrijving": "Dode ratten",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "259",
+          "omschrijving": "Dode vogels",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "135",
+          "omschrijving": "dood dier in/aan water (geen rat/duif)",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "126",
+          "omschrijving": "dood dier op/aan weg (geen rat/duif)",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "110",
+          "omschrijving": "Duivenoverlast",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "214",
+          "omschrijving": "Eikenprocessierups",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "181",
+          "omschrijving": "Levende ratten",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "182",
+          "omschrijving": "Overlast wespen, bijen, hommels",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        }
+      ]
+    },
+    {
+      "code": "20",
+      "omschrijving": "Gevaarlijk (straat)afval",
+      "onderwerpen": [
+        {
+          "code": "119",
+          "omschrijving": "accu",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "91",
+          "omschrijving": "asbest",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "120",
+          "omschrijving": "gastank/brandblusapparatuur",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "79",
+          "omschrijving": "injectienaalden/spuiten",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "92",
+          "omschrijving": "(klein) chemisch afval",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "88",
+          "omschrijving": "(olie)lekkage/morsing",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "118",
+          "omschrijving": "(olie)vaten",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "122",
+          "omschrijving": "onbekende stoffen",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "121",
+          "omschrijving": "uitgebrande voertuigen (herstel wegdek)",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        }
+      ]
+    },
+    {
+      "code": "3",
+      "omschrijving": "Graffiti",
+      "onderwerpen": [
+        {
+          "code": "9",
+          "omschrijving": "graffiti-discriminerend",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "10",
+          "omschrijving": "graffiti-overig",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        }
+      ]
+    },
+    {
+      "code": "37",
+      "omschrijving": "Maatregelen COVID -19",
+      "onderwerpen": [
+        {
+          "code": "283",
+          "omschrijving": "Controle coronatoegangsbewijs ",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        }
+      ]
+    },
+    {
+      "code": "48",
+      "omschrijving": "Meldkamer Stadsbeheer",
+      "onderwerpen": [
+        {
+          "code": "258",
+          "omschrijving": "Flying Squads Schone Stad",
+          "magMelden": true,
+          "magDoorverwijzen": false,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "257",
+          "omschrijving": "Flying Squads T&H",
+          "magMelden": true,
+          "magDoorverwijzen": false,
+          "indicatieBestandsbeheer": false
+        }
+      ]
+    },
+    {
+      "code": "6",
+      "omschrijving": "Overige onderwerpen",
+      "onderwerpen": [
+        {
+          "code": "274",
+          "omschrijving": "Marktvoorzieningen",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "291",
+          "omschrijving": "Melding op begraafplaats",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "23",
+          "omschrijving": "Openbare werken algemeen",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "140",
+          "omschrijving": "Schone Stad algemeen",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "289",
+          "omschrijving": "Stadsontwikkeling Algemeen",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "152",
+          "omschrijving": "Toezicht & Handhaving algemeen",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        }
+      ]
+    },
+    {
+      "code": "49",
+      "omschrijving": "Overlast",
+      "onderwerpen": [
+        {
+          "code": "275",
+          "omschrijving": "Overlast markten",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        }
+      ]
+    },
+    {
+      "code": "35",
+      "omschrijving": "Parkeeroverlast",
+      "onderwerpen": [
+        {
+          "code": "123",
+          "omschrijving": "Aanhangers/caravans",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "277",
+          "omschrijving": "Hinderlijk geparkeerde (brom-)fiets",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "203",
+          "omschrijving": "Parkeeroverlast",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "276",
+          "omschrijving": "Te lang geparkeerde (brom-)fiets",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        }
+      ]
+    },
+    {
+      "code": "8",
+      "omschrijving": "Singels en sloten",
+      "onderwerpen": [
+        {
+          "code": "33",
+          "omschrijving": "beschoeiingen",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "115",
+          "omschrijving": "drijfvuil in singel",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "285",
+          "omschrijving": "Fonteinen",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "35",
+          "omschrijving": "singel ",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "34",
+          "omschrijving": "zinkvuil/vloeistoffen in singel",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        }
+      ]
+    },
+    {
+      "code": "9",
+      "omschrijving": "Speelplaatsen",
+      "onderwerpen": [
+        {
+          "code": "40",
+          "omschrijving": "speelplaats",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        }
+      ]
+    },
+    {
+      "code": "19",
+      "omschrijving": "Straatmeubilair kapot",
+      "onderwerpen": [
+        {
+          "code": "174",
+          "omschrijving": "bewegwijzering",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": true
+        },
+        {
+          "code": "134",
+          "omschrijving": "klok / uurwerk ",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "171",
+          "omschrijving": "openbaar oplaadpunt elektrische auto",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "69",
+          "omschrijving": "straatmeubilair algemeen",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": true
+        },
+        {
+          "code": "60",
+          "omschrijving": "straatnaambord/verkeersbord",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": true
+        },
+        {
+          "code": "286",
+          "omschrijving": "Watertappunt",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        }
+      ]
+    },
+    {
+      "code": "5",
+      "omschrijving": "Straatverlichting",
+      "onderwerpen": [
+        {
+          "code": "165",
+          "omschrijving": "beschadigde lichtmast",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "173",
+          "omschrijving": "brandt geen verlichting in gehele straat",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "164",
+          "omschrijving": "lamp(en) uit",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "167",
+          "omschrijving": "lichtmastluikje staat open / bedrading zichtbaar",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "166",
+          "omschrijving": "scheefstaande lichtmast",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "172",
+          "omschrijving": "verlichting brandt ook overdag                ",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "168",
+          "omschrijving": "verlichting overig: (geef omschrijving)",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        }
+      ]
+    },
+    {
+      "code": "27",
+      "omschrijving": "Vuil op straat",
+      "onderwerpen": [
+        {
+          "code": "269",
+          "omschrijving": "Andere uitwerpselen",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "264",
+          "omschrijving": "Ganzen- of eendenpoep",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "46",
+          "omschrijving": "glas op straat",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "81",
+          "omschrijving": "Hondenpoep op straat",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "80",
+          "omschrijving": "honden-uitlaatzone",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "284",
+          "omschrijving": "Kerstboom op straat",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "270",
+          "omschrijving": "Onkruid in groen",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "44",
+          "omschrijving": "Onkruid op verharding",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "288",
+          "omschrijving": "Overlast blad of bloesem",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "206",
+          "omschrijving": "zwerfvuil in het water",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "42",
+          "omschrijving": "zwerfvuil in plantsoen",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "47",
+          "omschrijving": "zwerfvuil op straat",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        }
+      ]
+    },
+    {
+      "code": "12",
+      "omschrijving": "Wateroverlast / riolering",
+      "onderwerpen": [
+        {
+          "code": "51",
+          "omschrijving": "hoofdriool",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "210",
+          "omschrijving": "Rioolaansluiting (verstopping)",
+          "magMelden": false,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "104",
+          "omschrijving": "slechte/geen afwatering",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "98",
+          "omschrijving": "stankoverlast",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "114",
+          "omschrijving": "storing gemaal",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "55",
+          "omschrijving": "straatkolk (verstopt)",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "209",
+          "omschrijving": "Water in de kruipruimte, de kelder of in de tuin",
+          "magMelden": false,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "287",
+          "omschrijving": "Water- of rioolpersleiding",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        }
+      ]
+    },
+    {
+      "code": "13",
+      "omschrijving": "Weg (fiets/voet)pad brug",
+      "onderwerpen": [
+        {
+          "code": "14",
+          "omschrijving": "boomwortels",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "129",
+          "omschrijving": "brug",
+          "magMelden": false,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "8",
+          "omschrijving": "fietspad",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "183",
+          "omschrijving": "gebiedsgericht",
+          "magMelden": true,
+          "magDoorverwijzen": false,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "89",
+          "omschrijving": "gladheid (sneeuw-ijzel-vorst)",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "85",
+          "omschrijving": "invalide-oprit",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "73",
+          "omschrijving": "rijweg",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "130",
+          "omschrijving": "roltrap/rolband",
+          "magMelden": false,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "131",
+          "omschrijving": "sluis",
+          "magMelden": false,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "132",
+          "omschrijving": "tunnels/viaducten",
+          "magMelden": false,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "78",
+          "omschrijving": "verkeersdrempel",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "75",
+          "omschrijving": "voetpad",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        }
+      ]
+    },
+    {
+      "code": "22",
+      "omschrijving": "(Weg)werkzaamheden",
+      "onderwerpen": [
+        {
+          "code": "141",
+          "omschrijving": "bouwplaatsen - algemeen",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "32",
+          "omschrijving": "ingraving - huisaansluiting",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "18",
+          "omschrijving": "tijdelijke verkeerssituatie",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        }
+      ]
+    },
+    {
+      "code": "36",
+      "omschrijving": "Wildplakken",
+      "onderwerpen": [
+        {
+          "code": "199",
+          "omschrijving": "Posters",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "170",
+          "omschrijving": "Reclamebord",
+          "magMelden": true,
+          "magDoorverwijzen": false,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "169",
+          "omschrijving": "sandwichborden",
+          "magMelden": true,
+          "magDoorverwijzen": false,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "198",
+          "omschrijving": "Stickers",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        }
+      ]
+    },
+    {
+      "code": "33",
+      "omschrijving": "Winkelwagens",
+      "onderwerpen": [
+        {
+          "code": "56",
+          "omschrijving": "winkelwagens",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        }
+      ]
+    },
+    {
+      "code": "26",
+      "omschrijving": "Wrakken",
+      "onderwerpen": [
+        {
+          "code": "90",
+          "omschrijving": "(Brom-)fietswrak",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        },
+        {
+          "code": "117",
+          "omschrijving": "wrak - auto",
+          "magMelden": true,
+          "magDoorverwijzen": true,
+          "indicatieBestandsbeheer": false
+        }
+      ]
+    }
+  ]

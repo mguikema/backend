@@ -13,11 +13,11 @@ from signals.apps.reporting.filters import (
 )
 from signals.apps.reporting.rest_framework.serializers import ReportSignalsPerCategory
 from signals.apps.signals.models import Signal
-from signals.auth.backend import JWTAuthBackend
+from signals.auth.backend import AuthBackend
 
 
 class PrivateReportViewSet(viewsets.GenericViewSet):
-    authentication_classes = (JWTAuthBackend,)
+    authentication_classes = (AuthBackend,)
     permission_classes = (SIAPermissions,)
 
     pagination_class = None

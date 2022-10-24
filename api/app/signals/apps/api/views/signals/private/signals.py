@@ -1,6 +1,10 @@
 # SPDX-License-Identifier: MPL-2.0
 # Copyright (C) 2019 - 2022 Gemeente Amsterdam, Vereniging van Nederlandse Gemeenten
+from ast import arg
+from datetime import datetime
+import json
 import logging
+import requests
 
 from datapunt_api.rest import DatapuntViewSet, HALPagination
 from django.db.models import CharField, Value
@@ -38,7 +42,7 @@ from signals.apps.services.domain.pdf_summary import PDFSummaryService
 from signals.apps.signals.models import Signal
 from signals.apps.signals.models.aggregates.json_agg import JSONAgg
 from signals.apps.signals.models.functions.asgeojson import AsGeoJSON
-from signals.auth.backend import JWTAuthBackend
+from signals.auth.backend import AuthBackend
 
 logger = logging.getLogger(__name__)
 
@@ -79,7 +83,7 @@ class PrivateSignalViewSet(mixins.CreateModelMixin, mixins.UpdateModelMixin, Dat
 
     pagination_class = HALPagination
 
-    authentication_classes = (JWTAuthBackend,)
+    authentication_classes = (AuthBackend,)
     permission_classes = (SignalCreateInitialPermission,)
     object_permission_classes = (SignalViewObjectPermission, )
 
@@ -290,3 +294,34 @@ class PrivateSignalViewSet(mixins.CreateModelMixin, mixins.UpdateModelMixin, Dat
 
         headers = self.get_success_headers(serializer.data)
         return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
+
+    def list(self, request, *args, **kwargs):
+        from rest_framework.exceptions import ValidationError
+        from django.conf import settings
+        from signals.apps.msb.models import Melding
+        data = requests.get(f"{settings.MSB_API_URL}/api/")
+        # mapped_data = map_msb_list_item_on_signal(data.json())
+        mapped_data = data.json()
+        save_signals = True
+        if save_signals:
+            for msbm in mapped_data:
+                # m = Melding()
+
+                # m.msb_list_item = json.dumps(msbm)
+                # m.msb_id = msbm["id"]
+                try:
+                    m, created = Melding.objects.get_or_create(msb_id=msbm["id"])
+                    # print(m.msb_list_item)
+                    # print(json.dumps(msbm))
+                    if m.msb_list_item != json.dumps(msbm):
+                        m.msb_list_item = json.dumps(msbm)
+
+                        m.save()
+                    # print(created)
+                    # print(m.signal)
+                except ValidationError:
+                    pass
+            return super().list(request, *args, **kwargs)
+        paginator = HALPagination()
+        page = paginator.paginate_queryset(mapped_data, self.request, view=self)
+        return paginator.get_paginated_response(mapped_data)

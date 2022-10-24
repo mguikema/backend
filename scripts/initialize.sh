@@ -35,6 +35,7 @@ if [[ ${INITIALIZE_WITH_DUMMY_DATA:-0} == 1 ]]; then
   python manage.py load_areas sia-stadsdeel
 
   # Other scripts to load data should be placed here
+  python manage.py loaddata /app/signals/apps/signals/fixtures/categories.json
   # python manage.py dummy_categories --parents-to-create 10 --children-to-create 5 # Disabled because there are already categories loaded through the migrations
   # python manage.py dummy_departments --to-create 10  # Disabled because there are already departments loaded through the migrations
   python manage.py dummy_sources --to-create 10

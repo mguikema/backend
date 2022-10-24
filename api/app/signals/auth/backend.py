@@ -61,3 +61,11 @@ class JWTAuthBackend():
         authentication scheme should return `403 Permission Denied` responses.
         """
         return 'Bearer realm="signals"'
+
+
+AuthBackend = JWTAuthBackend
+
+if settings.LOCAL_DEVELOPMENT_AUTHENTICATION:
+    AuthBackend = JWTAuthBackend
+else:
+    AuthBackend = JWTAuthBackend

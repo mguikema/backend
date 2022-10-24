@@ -6,7 +6,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from signals.apps.api.filters.source import PrivateSourceFilterSet
 from signals.apps.api.serializers.source import SourceSerializer
 from signals.apps.signals.models import Source
-from signals.auth.backend import JWTAuthBackend
+from signals.auth.backend import AuthBackend
 
 
 class PrivateSourcesViewSet(DatapuntViewSet):
@@ -18,7 +18,7 @@ class PrivateSourcesViewSet(DatapuntViewSet):
 
     queryset = Source.objects.all()
 
-    authentication_classes = (JWTAuthBackend, )
+    authentication_classes = (AuthBackend, )
 
     filter_backends = (DjangoFilterBackend,)
     filterset_class = PrivateSourceFilterSet

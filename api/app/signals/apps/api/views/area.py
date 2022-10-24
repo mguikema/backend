@@ -11,7 +11,7 @@ from signals.apps.api.filters import AreaFilterSet
 from signals.apps.api.generics.pagination import LinkHeaderPagination
 from signals.apps.api.serializers.area import AreaGeoSerializer, AreaSerializer
 from signals.apps.signals.models import Area
-from signals.auth.backend import JWTAuthBackend
+from signals.auth.backend import AuthBackend
 
 
 class PublicAreasViewSet(DatapuntViewSet):
@@ -52,4 +52,4 @@ class PrivateAreasViewSet(PublicAreasViewSet):
     """
     Private ViewSet to display all area's in the database
     """
-    authentication_classes = (JWTAuthBackend, )
+    authentication_classes = (AuthBackend, )

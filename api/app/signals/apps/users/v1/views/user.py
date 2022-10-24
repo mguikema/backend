@@ -18,7 +18,7 @@ from signals.apps.users.v1.serializers.user import (
     PrivateUserHistoryHalSerializer,
     UserNameListSerializer
 )
-from signals.auth.backend import JWTAuthBackend
+from signals.auth.backend import AuthBackend
 
 # Get the user model as defined in the settings, defaults to the auth User from Django
 User = get_user_model()
@@ -42,7 +42,7 @@ class UserViewSet(DatapuntViewSetWritable):
         'profile__departments',
     ).order_by(Lower('username'))
 
-    authentication_classes = (JWTAuthBackend,)
+    authentication_classes = (AuthBackend,)
     permission_classes = (SIAUserPermissions,)
 
     serializer_detail_class = UserDetailHALSerializer
@@ -87,7 +87,7 @@ class LoggedInUserView(RetrieveAPIView):
     """
     queryset = User.objects.none()
 
-    authentication_classes = (JWTAuthBackend,)
+    authentication_classes = (AuthBackend,)
     permission_classes = (SIAPermissions,)
 
     serializer_class = UserDetailHALSerializer
@@ -104,7 +104,7 @@ class AutocompleteUsernameListView(ListAPIView):
     """
     queryset = User.objects.all().order_by(Lower('username'))
 
-    authentication_classes = (JWTAuthBackend,)
+    authentication_classes = (AuthBackend,)
     permission_classes = (SIAPermissions,)
 
     serializer_class = UserNameListSerializer

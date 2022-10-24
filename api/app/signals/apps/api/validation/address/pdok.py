@@ -62,7 +62,9 @@ class PDOKAddressValidation(BaseAddressValidation):
     def _search(self, address, lon=None, lat=None, *args, **kwargs):
         try:
             query_params = self._pdok_request_query_params(address=address, lon=lon, lat=lat)
+            print(address)
             response = get(f'{self.address_validation_url}?{query_params.urlencode()}')
+            print(response.json())
             response.raise_for_status()
         except RequestException as e:
             raise AddressValidationUnavailableException(e)

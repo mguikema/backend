@@ -15,7 +15,7 @@ from signals.apps.api.serializers import (
 from signals.apps.api.serializers.category import PrivateCategoryHistoryHalSerializer
 from signals.apps.history.services import HistoryLogService
 from signals.apps.signals.models import Category
-from signals.auth.backend import JWTAuthBackend
+from signals.auth.backend import AuthBackend
 
 
 class PublicCategoryViewSet(NestedViewSetMixin, DatapuntViewSet):
@@ -47,7 +47,7 @@ class PrivateCategoryViewSet(UpdateModelMixin, DatapuntViewSet):
         'categorydepartment_set__department',
     ).all()
 
-    authentication_classes = (JWTAuthBackend,)
+    authentication_classes = (AuthBackend,)
     permission_classes = (SIAPermissions & ModelWritePermissions,)
 
     def perform_update(self, serializer):

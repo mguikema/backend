@@ -7,7 +7,7 @@ from rest_framework.permissions import DjangoModelPermissions
 
 from signals.apps.api.generics.permissions import SIAPermissions
 from signals.apps.users.v1.serializers import RoleSerializer
-from signals.auth.backend import JWTAuthBackend
+from signals.auth.backend import AuthBackend
 
 
 class RoleViewSet(DatapuntViewSetWritable):
@@ -16,7 +16,7 @@ class RoleViewSet(DatapuntViewSetWritable):
         'permissions__content_type',
     ).order_by(Lower('name'))
 
-    authentication_classes = (JWTAuthBackend,)
+    authentication_classes = (AuthBackend,)
     permission_classes = (SIAPermissions & DjangoModelPermissions, )
 
     serializer_detail_class = RoleSerializer

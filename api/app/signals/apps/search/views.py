@@ -9,11 +9,11 @@ from signals.apps.api.serializers import PrivateSignalSerializerDetail, PrivateS
 from signals.apps.search.documents.signal import SignalDocument
 from signals.apps.search.pagination import ElasticHALPagination
 from signals.apps.signals.models import Signal
-from signals.auth.backend import JWTAuthBackend
+from signals.auth.backend import AuthBackend
 
 
 class SearchView(DatapuntViewSet):
-    authentication_classes = (JWTAuthBackend,)
+    authentication_classes = (AuthBackend,)
     permission_classes = (SIAPermissions,)
 
     serializer_class = PrivateSignalSerializerList

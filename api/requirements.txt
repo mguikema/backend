@@ -140,3 +140,6 @@ webencodings==0.5.1
 wrapt==1.14.1
 xmlunittest==0.5.0
 zipp==3.8.1
+exifread
+piexif
+GPSPhoto

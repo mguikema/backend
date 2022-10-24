@@ -18,7 +18,7 @@ from signals.apps.api.serializers.expression import (
 )
 from signals.apps.services.domain.dsl import DslService
 from signals.apps.signals.models import Expression, ExpressionContext
-from signals.auth.backend import JWTAuthBackend
+from signals.auth.backend import AuthBackend
 
 
 class PrivateExpressionViewSet(DatapuntViewSetWritable):
@@ -26,7 +26,7 @@ class PrivateExpressionViewSet(DatapuntViewSetWritable):
     private ViewSet to display/process expressions in the database
     """
 
-    authentication_classes = (JWTAuthBackend, )
+    authentication_classes = (AuthBackend, )
     queryset = Expression.objects.all()
     queryset_detail = Expression.objects.all()
 

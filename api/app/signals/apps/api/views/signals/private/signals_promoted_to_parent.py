@@ -11,7 +11,7 @@ from signals.apps.api.generics import mixins
 from signals.apps.api.generics.permissions import SIAPermissions
 from signals.apps.api.serializers import SignalIdListSerializer
 from signals.apps.signals.models import Signal
-from signals.auth.backend import JWTAuthBackend
+from signals.auth.backend import AuthBackend
 
 logger = logging.getLogger(__name__)
 
@@ -20,7 +20,7 @@ class SignalPromotedToParentViewSet(GenericViewSet, mixins.ListModelMixin):
     serializer_class = SignalIdListSerializer
     pagination_class = HALPagination
 
-    authentication_classes = (JWTAuthBackend,)
+    authentication_classes = (AuthBackend,)
     permission_classes = (SIAPermissions,)
 
     filter_backends = (DjangoFilterBackend,)

@@ -7,7 +7,7 @@ from unittest.mock import patch
 from jwcrypto import jwt
 from rest_framework.exceptions import AuthenticationFailed
 
-from signals.auth.backend import JWTAuthBackend
+from signals.auth.backend import AuthBackend
 from signals.auth.config import get_settings
 from signals.auth.jwks import get_keyset
 from signals.auth.tokens import JWTAccessToken
@@ -111,7 +111,7 @@ class TestBackend(SignalsBaseApiTestCase):
             mock_token_data.return_value = claims, self.superuser.username
             mock_cache.get.return_value = None
 
-            user, scope = JWTAuthBackend.authenticate(mock_request)
+            user, scope = AuthBackend.authenticate(mock_request)
             self.assertEqual(user.username, self.superuser.username)
 
     @skip("Scope test are not required")
@@ -128,7 +128,7 @@ class TestBackend(SignalsBaseApiTestCase):
             mock_cache.get.return_value = None
 
             with self.assertRaises(AuthenticationFailed) as cm:
-                JWTAuthBackend.authenticate(mock_request)
+                AuthBackend.authenticate(mock_request)
 
             e = cm.exception
             self.assertEqual(str(e), 'No token or required scope')
@@ -146,7 +146,7 @@ class TestBackend(SignalsBaseApiTestCase):
             mock_cache.get.return_value = None
 
             with self.assertRaises(AuthenticationFailed) as cm:
-                JWTAuthBackend.authenticate(mock_request)
+                AuthBackend.authenticate(mock_request)
 
             e = cm.exception
             self.assertEqual(str(e), 'User {} is not authorized'.format('idonotexist'))

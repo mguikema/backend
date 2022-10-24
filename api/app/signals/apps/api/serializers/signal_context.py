@@ -80,6 +80,8 @@ class SignalContextSerializer(HALSerializer):
         )
 
     def get_near(self, obj):
+        if not obj.location:
+            return []
         signals_for_geography_qs = Signal.objects.annotate(
             distance_from_point=Distance('location__geometrie', obj.location.geometrie),
         ).filter(
@@ -96,7 +98,7 @@ class SignalContextSerializer(HALSerializer):
         }
 
     def get_reporter(self, obj):
-        if not obj.reporter.email:
+        if not obj.location or not obj.reporter.email:
             return None
 
         reporter_email = obj.reporter.email

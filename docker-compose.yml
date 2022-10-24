@@ -5,6 +5,8 @@ services:
     ports:
       - 1025:1025
       - 8025:8025
+    networks:
+      - signalen_network
 
   dex:
     image: quay.io/dexidp/dex:v2.23.0
@@ -15,6 +17,8 @@ services:
     volumes:
       - ./dex.dev.yml:/config.yml
       - dex-data:/data
+    networks:
+      - signalen_network
 
   elasticsearch:
     image: amsterdam/elasticsearch6
@@ -25,6 +29,8 @@ services:
       - "9300:9300"
     volumes:
       - "~/.ssh/datapunt.key:/root/.ssh/datapunt.key"
+    networks:
+      - signalen_network
 
   database:
     image: amsterdam/postgres11
@@ -38,6 +44,8 @@ services:
     volumes:
       - "~/.ssh/datapunt.key:/root/.ssh/datapunt.key"
       - postgres-data:/var/lib/postgresql/data
+    networks:
+      - signalen_network
 
   rabbit:
     image: rabbitmq:3.8
@@ -48,6 +56,8 @@ services:
       - RABBITMQ_DEFAULT_USER=signals
       - RABBITMQ_DEFAULT_PASS=insecure
       - RABBITMQ_DEFAULT_VHOST=vhost
+    networks:
+      - signalen_network
 
   celery:
     build: ./api
@@ -72,6 +82,8 @@ services:
     volumes:
       - ./api/app:/app
       - ./api/deploy:/deploy
+    networks:
+      - signalen_network
     command: celery -A signals worker -l info
 
   celery_beat:
@@ -91,6 +103,8 @@ services:
     volumes:
       - ./api/app:/app
       - ./api/deploy:/deploy
+    networks:
+      - signalen_network
     command: celery -A signals beat -l info --pidfile /tmp/celerybeat.pid
 
   api:
@@ -115,14 +129,32 @@ services:
       - INITIALIZE_WITH_DUMMY_DATA=0
       - AUTOMATICALLY_CREATE_CHILD_SIGNALS_PER_CONTAINER=True
       - RABBITMQ_HOST=rabbit
+    env_file:
+      - .env
     volumes:
       - ./api/app:/app
       - ./api/deploy:/deploy
       - ./dwh_media:/dwh_media
       - ./scripts/initialize.sh:/initialize.sh
+    networks:
+      - signalen_network
     command:
       - /initialize.sh
+  msb:
+    build: ./msb
+    ports:
+      - "8001:8001"
+    env_file:
+      - .env
+    volumes:
+      - ./msb/app/:/build/app
+    networks:
+      - signalen_network
 
 volumes:
   dex-data:
   postgres-data:
+
+networks:
+  signalen_network:
+    external: true

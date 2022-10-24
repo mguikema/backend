@@ -20,7 +20,7 @@ from signals.apps.api.serializers import (
     SignalContextSerializer
 )
 from signals.apps.signals.models import Signal
-from signals.auth.backend import JWTAuthBackend
+from signals.auth.backend import AuthBackend
 
 logger = logging.getLogger(__name__)
 
@@ -31,7 +31,7 @@ class SignalContextViewSet(mixins.RetrieveModelMixin, GenericViewSet):
 
     pagination_class = HALPagination
 
-    authentication_classes = (JWTAuthBackend,)
+    authentication_classes = (AuthBackend,)
     permission_classes = (SIAPermissions,)
 
     def get_queryset(self, *args, **kwargs):

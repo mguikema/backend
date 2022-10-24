@@ -490,6 +490,8 @@ class PrivateSignalSerializerList(SignalValidationMixin, HALSerializer):
         reporter_data = validated_data.pop('reporter')
 
         location_data = validated_data.pop('location')
+        print("location_data")
+        print(location_data)
         location_data['created_by'] = logged_in_user.email
 
         category_assignment_data = validated_data.pop('category_assignment')

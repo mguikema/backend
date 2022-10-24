@@ -20,7 +20,7 @@ from signals.apps.api.serializers import (
 )
 from signals.apps.services.domain.permissions.signal import SignalPermissionService
 from signals.apps.signals.models import Attachment, Signal
-from signals.auth.backend import JWTAuthBackend
+from signals.auth.backend import AuthBackend
 
 
 class PublicSignalAttachmentsViewSet(mixins.CreateModelMixin, GenericViewSet):
@@ -47,7 +47,7 @@ class PrivateSignalAttachmentsViewSet(
     serializer_class = PrivateSignalAttachmentSerializer
     serializer_detail_class = PrivateSignalAttachmentSerializer
 
-    authentication_classes = (JWTAuthBackend,)
+    authentication_classes = (AuthBackend,)
 
     def get_queryset(self, *args, **kwargs):
         user = self.request.user

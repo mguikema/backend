@@ -21,7 +21,7 @@ class TestJWTAuthBackend(TestCase):
 
     @skip("Scope test are not required")
     def test_missing_scope(self):
-        jwt_auth_backend = backend.JWTAuthBackend()
+        jwt_auth_backend = backend.AuthBackend()
 
         mocked_request = mock.Mock()
         mocked_request.is_authorized_for.return_value = False
@@ -32,7 +32,7 @@ class TestJWTAuthBackend(TestCase):
     @mock.patch('signals.auth.tokens.JWTAccessToken.token_data')
     @mock.patch('signals.auth.backend.cache')
     def test_with_scope_wrong_user_cache_miss(self, mocked_cache, mock_token_data):
-        jwt_auth_backend = backend.JWTAuthBackend()
+        jwt_auth_backend = backend.AuthBackend()
 
         mocked_request = mock.Mock()
         mocked_request.is_authorized_for.return_value = True
@@ -58,7 +58,7 @@ class TestJWTAuthBackend(TestCase):
     @mock.patch('signals.auth.backend.cache')
     @mock.patch('signals.auth.backend.User')
     def test_with_scope_wrong_user_cache_hit(self, mocked_user_model, mocked_cache, mock_token_data):
-        jwt_auth_backend = backend.JWTAuthBackend()
+        jwt_auth_backend = backend.AuthBackend()
 
         mocked_request = mock.Mock()
         mocked_request.is_authorized_for.return_value = True
@@ -78,7 +78,7 @@ class TestJWTAuthBackend(TestCase):
     @mock.patch('signals.auth.tokens.JWTAccessToken.token_data')
     @mock.patch('django.core.cache.cache')
     def test_with_scope_correct_user(self, mocked_cache, mock_token_data):
-        jwt_auth_backend = backend.JWTAuthBackend()
+        jwt_auth_backend = backend.AuthBackend()
 
         mocked_request = mock.Mock()
         mocked_request.is_authorized_for.return_value = True
@@ -98,7 +98,7 @@ class TestJWTAuthBackend(TestCase):
         # In case the subject is not set on the JWT token (as the `sub claim`).
         # This test demonstrates the problem. See SIG-889 for next steps.
 
-        jwt_auth_backend = backend.JWTAuthBackend()
+        jwt_auth_backend = backend.AuthBackend()
 
         mocked_request = mock.Mock()
         mocked_request.is_authorized_for.return_value = True
@@ -112,7 +112,7 @@ class TestJWTAuthBackend(TestCase):
     # --- Note ---
     # For local development the "always_ok" user with email=settings.TEST_LOGIN
     # must be present to bypass the OAuth2 check. Previous versions of the
-    # JWTAuthBackend created a superuser with email=settings.ADMIN_LOGIN. These
+    # AuthBackend created a superuser with email=settings.ADMIN_LOGIN. These
     # two settings were equal allowing the always_ok user to authenticate and
     # pass all permissions checks.
     #
@@ -127,7 +127,7 @@ class TestJWTAuthBackend(TestCase):
     @mock.patch('signals.auth.backend.cache')
     def test_no_test_login_user(self, mocked_cache):
 
-        jwt_auth_backend = backend.JWTAuthBackend()
+        jwt_auth_backend = backend.AuthBackend()
 
         mocked_request = mock.Mock()
         mocked_request.is_authorized_for.return_value = True
@@ -144,7 +144,7 @@ class TestJWTAuthBackend(TestCase):
             username=settings.TEST_LOGIN,
             email=settings.TEST_LOGIN,
         )
-        jwt_auth_backend = backend.JWTAuthBackend()
+        jwt_auth_backend = backend.AuthBackend()
 
         mocked_request = mock.Mock()
         mocked_request.is_authorized_for.return_value = True
